@@ -432,6 +432,8 @@
 			self.$view.remove();
 			self.$list.remove();
 			self.$elem.show();
+			self.$elem.unbind('jQselectable.click');
+			self.$elem.unbind('jQselectable.change');
 			self.$document.unbind('click.' + self.id);
 
 			self.$elem.trigger('jQselectable.destroy');
